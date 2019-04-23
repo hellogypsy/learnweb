@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      li {
+        border : 1px red solid
+      }
+      dot li {
+        border : 1px green dotted
+      }
+      #selected {
+        border : 1px blue solid
+      }
+      #padding_list {
+        border : 1px red solid;
+        padding: 30px
+      }
+      #margin_list{
+        border : 1px green solid;
+        padding: 30px;
+        margin : 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>border(solid)</li>
+      <dot>
+        <li>태그 사용 + border(solid)</li>
+      </dot>
+      <li id="selected">ID 사용 + border(dot)</li>
+      <li id="padding_list">ID 사용 + border(solid) + padding 사용</li>
+      <li id="margin_list">ID 사용 + border(solid) + padding + margin</li>
+      <li>구글 브라우저를 키고 요소검사 기능을 이용하여 어떤 속성이 어떤식으로 작동하는지 확인가능</li>
+    </ul>
+  </body>
+</html>
