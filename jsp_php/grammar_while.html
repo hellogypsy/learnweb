@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>script while 반복문</h1>
+    <script type="text/javascript">
+      i=0;
+      while(i<10){
+        document.write("JavaScript while roof <br />");
+        i = i+1;
+      }
+    </script>
+    <h1>php while 반복문</h1>
+    <?php
+      $i = 0;
+      while ($i<10){
+        echo "php while roof <br />";
+        $i = $i +1;
+      }
+    ?>
+    <h1>UL 태그안에 script while 반복문</h1>
+    <ul>
+      <script type="text/javascript">
+          i=0;
+          while(i<10){
+            document.write("<li> Javascript while roof</li>");
+            i = i +1;
+          }
+      </script>
+    </ul>
+    <h1>UL 태그안에 php while 반복문</h1>
+    <ul>
+    <?php
+      $i = 0;
+      while ($i<10){
+        echo "<li>php while roof </li>";
+        $i = $i +1;
+      }
+    ?>
+    </ul>
+  </body>
+</html>

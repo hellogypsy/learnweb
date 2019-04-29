@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>script 배열</h1>
+    <script type="text/javascript">
+      list = new Array("1","2","3");
+      i=0;
+      while(i<list.length){
+        document.write("<li>"+list[i]+"</li>");
+        i = i + 1;
+      }
+    </script>
+    <h1>php 배열</h1>
+    <?php
+      $list = array ("1", "2", "3", "4");
+      $i = 0;
+      while($i < count($list)){
+        echo "<li>".$list[$i]."</li>";
+        $i = $i +1;
+      }
+    ?>
+  </body>
+</html>

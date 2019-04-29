@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var Request = function()
+      {
+        this.getParameter = function( name )
+        {
+          var rtnval = "";
+          var nowAddress = unescape(location.href);
+          var parameters = (nowAddress.slice(nowAddress.indexOf("?")+1,nowAddress.length)).split("&");
+
+          for(var i = 0 ; i < parameters.length ; i++)
+          {
+            var varName = parameters[i].split("=")[0];
+            if(varName.toUpperCase() == name.toUpperCase())
+            {
+              rtnval = parameters[i].split("=")[1];
+              break;
+            }
+          }
+          return rtnval;
+        }
+      }
+
+      function fncInit()
+      {
+        var fm      = document.frm;
+
+        var request = new Request();
+        fm.Password.value   = request.getParameter('strPassword');
+        fm.Email.value   = request.getParameter('strEmail');
+        fm.UserName.value = request.getParameter('strUserName');
+      }
+    </script>
+  </head>
+  <body onload="javascript_:fncInit();">
+    <form name="frm">
+      비밀 번호 : <input type="text" name="Password" value=""><br>
+      이메일  : <input type="text" name="Email" value=""><br>
+      이름 : <input type="text" name="UserName" value=""><br>
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--
+    <form class="" action="grammar_form_result.html" method="get">
+      <p>비밀번호를 입력하세요</p>
+      <input type = "text" name = "strPassword">
+      <input type = "submit">
+    </form>
+    -->
+
+    <!--
+    html 끼리의 통신은 GET방식을 사용해야한다.
+https://kin.naver.com/qna/detail.nhn?d1id=1&dirId=1040205&docId=129662714&qb=aHRtbCDqsJIg7KCE7Iah&enc=utf8&section=kin&rank=1&search_sort=0&spq=0&pid=S8l77spySD0ssvAlg/hsssssssd-152472&sid=LpETRU0H5OJa3GlxRf0dig%3D%3D
+
+      -->
+    <script type="text/javascript">
+    function fncSubmit()
+    {
+      var fm = document.frm;
+      fm.action = 'grammar_form_result.html'
+                  + '?strPassword='
+                  + fm.strPassword.value
+                  + '&strEmail='
+                  + fm.strEmail.value
+                  + '&strUserName='
+                  + fm.strUserName.value;
+      fm.submit();
+    }
+    </script>
+      <form name = 'frm'>
+        <p>입력하세요</p>
+        비밀번호 : <input type="text" name="strPassword" value="AAA1"><br>
+        email : <input type="text" name="strEmail" value="BBB1"><br>
+        이름 : <input type="text" name="strUserName" value="CCC1"><br>
+        <input type="button" onclick='javascript_:fncSubmit();' value='클릭'>
+      </form>
+
+  </body>
+</html>
